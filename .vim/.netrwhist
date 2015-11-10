@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/marek/cdisc/projects/wfe/allegro-src/src/include/wrt'
+let g:netrw_dirhist_2='/home/marek/cdisc/projects/wfe/allegro-src/src/include'
+let g:netrw_dirhist_3='/home/marek/cdisc/projects/wfe/allegro-src/src'
+let g:netrw_dirhist_4='/home/marek/cdisc/projects/wfe/allegro-src/src/wrt'
