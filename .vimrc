@@ -4,12 +4,18 @@ hi User3 ctermbg=1 ctermfg=1 guibg=blue  guifg=green
 
 "hi StatusLine cterm=none gui=none
 hi StatusLineNC ctermfg=8 ctermbg=6 cterm=none gui=none
+hi DiffAdd      ctermfg=231 ctermbg=64 cterm=bold guifg=#f8f8f2 guibg=#478815 gui=bold
+hi DiffDelete   ctermfg=88 ctermbg=NONE cterm=NONE guifg=#8c0c10 guibg=NONE gui=NONE
+hi DiffChange   ctermfg=231 ctermbg=23 cterm=NONE guifg=#f8f8f2 guibg=#26446c gui=NONE
+hi DiffText     ctermfg=231 ctermbg=24 cterm=bold guifg=#f8f8f2 guibg=#204a87 gui=bold
+hi Visual       ctermfg=NONE ctermbg=7 cterm=NONE guifg=NONE guibg=#19242f gui=NONE
 
 nnoremap <F5> :buffers<CR>:buffer<Space>
 set wildchar=<Tab> wildmenu wildmode=full
 set wildcharm=<C-Z>
 nnoremap <F6> :b <C-Z>
 
+"colorscheme lucario
 
 set cursorline
 set history=50          " keep 50 lines of command line history
@@ -37,6 +43,7 @@ set rulerformat=%15(%c%V\ %p%%%)
 "set list
 set listchars=tab:>-,trail:⋅,nbsp:⋅
 
+syntax enable
 syntax on
 
 if has('cscope')
