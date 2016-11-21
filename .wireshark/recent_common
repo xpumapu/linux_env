@@ -1,0 +1,64 @@
+# Recent settings file for Wireshark 1.12.1.
+#
+# This file is regenerated each time Wireshark is quit.
+# So be careful, if you want to make manual changes here.
+
+######## Recent capture files (latest last), cannot be altered through command line ########
+
+recent.capture_file: /root/wireshark_logs/ath10k_eap_tls
+recent.capture_file: /root/wireshark_logs/ath9k_eap_tls
+recent.capture_file: /root/wep_tc1.pcap
+recent.capture_file: /home/marek/cdisk/qca/Bugs/bug117/SnifferTrace_N-4.2.7
+recent.capture_file: /home/marek/cdisk/qca/bugs/bug251/wfa_lab/4-2-23-pass-116.pcap
+recent.capture_file: /home/marek/cdisc/tmp/wifi-snif.pcap
+recent.capture_file: /home/marek/cdisc/atheros/ath9k/ath9k-ps-2.pcap
+recent.capture_file: /home/marek/cdisc/atheros/ath9k/ath9k-ps-1.pcap
+recent.capture_file: /home/marek/cdisc/projects/yocto/files/unwanted_TX.pcapng
+recent.capture_file: /home/marek/cdisc/projects/yocto/files/reduntant_ACK_mdelay.pcapng
+
+######## Recent capture filters (latest last), cannot be altered through command line ########
+
+
+######## Recent display filters (latest last), cannot be altered through command line ########
+
+recent.display_filter: (wlan.addr == f4:ec:38:8a:ee:97) || (wlan.addr == 00:03:07:12:34:60)||(wlan.addr == 00:aa:ab:03:58:7a)
+recent.display_filter: wlan.fc.type_subtype == 0x0004
+recent.display_filter: wlan.sa == 00:03:7f:4e:a0:aa
+recent.display_filter: wlan.fc.type_subtype == 0x0008
+recent.display_filter: (wlan.addr == 00:aa:ab:03:58:7a)
+recent.display_filter: (wlan.addr == 00:03:07:12:34:60)
+recent.display_filter: (wlan.addr == f4:ec:38:8a:ee:97) || (wlan.addr == 00:03:07:12:34:60)||(wlan.addr == 00:aa:ab:03:58:7a)|| (wlan.addr == 00:14:c2:dc:7c:8f)
+
+# Main window geometry.
+# Decimal numbers.
+gui.geometry_main_x: 20
+gui.geometry_main_y: 20
+gui.geometry_main_width: 1680
+gui.geometry_main_height: 1002
+
+# Main window maximized.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_main_maximized: TRUE
+
+# Statusbar left pane size.
+# Decimal number.
+gui.geometry_status_pane: 1102
+
+# Statusbar middle pane size.
+# Decimal number.
+gui.geometry_status_pane_right: 106
+
+# Last used Configuration Profile.
+gui.last_used_profile: Default
+
+# WLAN statistics upper pane size.
+# Decimal number.
+gui.geometry_status_wlan_stats_pane: 200
+
+# Warn if running with elevated permissions (e.g. as root).
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_elevated: TRUE
+
+# Warn if npf.sys isn't loaded on Windows >= 6.0.
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_no_npf: TRUE

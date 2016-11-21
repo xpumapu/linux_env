@@ -1,0 +1,73 @@
+#!/bin/sh
+
+
+usage() {
+	echo "usage: $0 <cmd>
+	where
+		cmd is:
+			pop - get curent env files,
+			push - install env files to their places,
+	"
+}
+
+if test $# -gt 1 || test $# -eq 0
+then
+	usage
+	exit 1
+fi
+
+file_list="\
+	$HOME/.vimrc \
+	$HOME/.tmux.conf \
+	$HOME/.bashrc \
+	$HOME/.Xresources \
+	$HOME/.profile \
+	"
+
+dir_list="\
+	$HOME/.vim \
+	$HOME/.wireshark \
+	"
+
+
+call_pop() {
+	for item in $file_list
+	do
+		echo "Pop file: $item"
+		cp -v "${item}" .
+	done
+ 
+	for item in $dir_list
+	do
+		echo "Pop directory: $item"
+		cp -vr $item .
+	done
+}
+
+
+call_push() {
+	for item in $file_list
+	do
+		b_item=$(basename $item)
+		echo "Push file: $b_item to $item"
+		cp -v ${b_item} $item
+	done
+ 
+	for item in $dir_list
+	do
+		b_item=$(basename $item)
+		echo "Push directory: $b_item to $item"
+		cp -vr ${b_item} $item
+	done
+}
+
+if test $1 = "pop"
+then
+	call_pop
+fi
+
+if test $1 = "push"
+then
+	call_push
+fi
+
