@@ -46,6 +46,7 @@ call_pop() {
 
 
 call_push() {
+	mkdir -p $HOME/.tmux_history
 	for item in $file_list
 	do
 		b_item=$(basename $item)
@@ -56,8 +57,9 @@ call_push() {
 	for item in $dir_list
 	do
 		b_item=$(basename $item)
-		echo "Push directory: $b_item to $item"
-		cp -vr ${b_item} $item
+		d_item=$(dirname $item)
+		echo "Push directory: $b_item to $d_item"
+		cp -vr ${b_item} $d_item
 	done
 }
 

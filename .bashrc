@@ -19,8 +19,15 @@ shopt -s histappend
 HISTSIZE=100000
 HISTFILESIZE=100000
 
-term_no=$(basename $(tty))
-HISTFILE=$HOME/.bash_history_$term_no
+s_name=$(tmux display-message -p '#S')
+win_no=$(tmux display-message -p '#I')
+pan_idx=$(tmux display-message -p '#P')
+HISTFILE=$HOME/.tmux_history/.bash_history_${s_name}${win_no}${pan_idx}
+
+if [ ! -e $HISTFILE ]
+then
+	cp -v "$HOME/.bash_history" "$HISTFILE"
+fi
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
