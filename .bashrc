@@ -24,10 +24,8 @@ then
 	# no tmux, default history
 	HISTFILE=$HOME/.bash_history
 else
-	s_name=$(tmux display-message -p '#S')
-	win_no=$(tmux display-message -p '#I')
-	pan_idx=$(tmux display-message -p '#P')
-	HISTFILE=$HOME/.tmux_history/.bash_history_${s_name}_${win_no}_${pan_idx}
+	s_name=$(tmux display-message -p -t $TMUX_PANE '#S_#I_#P')
+	HISTFILE=$HOME/.tmux_history/.bash_history_${s_name}
 
 	if [ ! -e $HISTFILE ]
 	then
